@@ -587,11 +587,8 @@
       place-items: center;
       padding: 64px 28px;
       text-align: center;
-      background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.90)),
-        url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80") center/cover;
-      box-shadow: 0 18px 44px rgba(76, 58, 98, 0.10);
-      border: 1px solid rgba(155, 122, 200, 0.16);
+      background: linear-gradient(135deg, var(--lavender-700) 0%, var(--lavender-500) 100%);
+      box-shadow: var(--shadow);
     }
 
     .booking-panel::before,
@@ -601,7 +598,7 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background: rgba(222, 208, 242, 0.55);
+      background: rgba(255,255,255,0.12);
       filter: blur(1px);
     }
 
@@ -1456,16 +1453,18 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      align-items: start;
-      margin-bottom: 44px;
+      align-items: stretch;
+      margin-bottom: 36px;
     }
     .ai-skin-photos {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
+      height: 100%;
     }
     .ai-photo {
       width: 100%;
+      height: 100%;
       border-radius: var(--radius-xl);
       object-fit: cover;
       box-shadow: var(--soft-shadow);
@@ -1473,14 +1472,15 @@
       border: 6px solid rgba(255,255,255,.82);
     }
     .ai-photo-primary  { aspect-ratio: 3/4; }
-    .ai-photo-secondary { aspect-ratio: 3/4; margin-top: 32px; }
-    .ai-skin-features { display: grid; gap: 18px; }
+    .ai-photo-secondary { aspect-ratio: 3/4; }
+    .ai-skin-features { display: flex; flex-direction: column; gap: 14px; height: 100%; }
     .ai-feature {
       background: rgba(255,255,255,.9);
       border: 1px solid rgba(155,122,200,.18);
       border-radius: var(--radius-lg);
-      padding: 22px 26px;
+      padding: 18px 22px;
       box-shadow: var(--soft-shadow);
+      flex: 1;
     }
     .ai-feature h3 {
       color: var(--lavender-800);
@@ -1496,6 +1496,7 @@
       font-weight: 620;
     }
     .ai-skin-cta { margin-top: 6px; }
+    .ai-skin-cta-center { text-align: center; margin: 28px 0 36px; }
     .ai-skin-stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1678,10 +1679,9 @@
     
     <section class="ai-skin" id="ai-skin-analysis" aria-labelledby="ai-skin-title">
       <div class="page-shell">
-        <div class="ai-skin-header">
-          <span class="eyebrow">Advanced Technology</span>
-          <h2 id="ai-skin-title">AI Skin <span>Analysis</span></h2>
-          <p>Patricia Beauty Clinic uses the k33 AI Skin Analyser — a clinical-grade device that maps your skin across multiple dimensions in under two minutes and generates a personalised report. Every treatment recommendation starts with real data, not guesswork.</p>
+        <div class="section-heading">
+          <h2 id="ai-skin-title">AI Skin Analysis</h2>
+          <p>Clinical-grade skin mapping that builds your personalised treatment report in under two minutes.</p>
         </div>
         <div class="ai-skin-grid">
           <div class="ai-skin-photos">
@@ -1705,16 +1705,11 @@
               <h3>Solution Recommendations</h3>
               <p>Results are matched to targeted treatment solutions and personalised homecare advice based on your skin type, tone and goals — so you leave knowing exactly what your skin needs.</p>
             </div>
-            <div class="ai-skin-cta">
-              <a class="btn btn-primary" href="https://www.fresha.com/book-now/havillah-beauty-px0lfiri/all-offer?share=true&pId=1447509" target="_blank" rel="noopener">Book Your Skin Analysis <span class="circle-icon">&#8599;</span></a>
-            </div>
+
           </div>
         </div>
-        <div class="ai-skin-stats">
-          <div class="ai-stat"><span class="ai-stat-number">8+</span><span class="ai-stat-label">Skin Dimensions Analysed</span></div>
-          <div class="ai-stat"><span class="ai-stat-number">&lt;2 min</span><span class="ai-stat-label">Full Scan Time</span></div>
-          <div class="ai-stat"><span class="ai-stat-number">100%</span><span class="ai-stat-label">Non-Invasive</span></div>
-          <div class="ai-stat"><span class="ai-stat-number">k33</span><span class="ai-stat-label">Clinical-Grade Device</span></div>
+        <div class="ai-skin-cta-center">
+          <a class="btn btn-primary" href="https://www.fresha.com/book-now/havillah-beauty-px0lfiri/all-offer?share=true&pId=1447509" target="_blank" rel="noopener">Book Your Skin Analysis <span class="circle-icon">&#8599;</span></a>
         </div>
       </div>
     </section>
