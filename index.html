@@ -108,13 +108,13 @@
     .nav-card {
       width: min(var(--container), calc(100% - 48px));
       margin: 0 auto;
-      min-height: 92px;
+      min-height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
-      padding: 18px 26px 18px 34px;
-      background: rgba(255, 255, 255, 0.86);
+      padding: 10px 20px 10px 26px;
+      background: rgba(255, 255, 255, 0.58);
       border: 1px solid rgba(255, 255, 255, 0.76);
       border-radius: 28px;
       box-shadow: var(--soft-shadow);
@@ -933,9 +933,9 @@
       }
 
       .nav-card {
-        min-height: 74px;
+        min-height: 58px;
         border-radius: 22px;
-        padding: 14px 14px 14px 18px;
+        padding: 10px 12px 10px 16px;
       }
 
       .brand {
@@ -1087,16 +1087,14 @@
       right: 22px;
       bottom: 22px;
       z-index: 60;
-      min-height: 58px;
-      padding: 0 18px 0 16px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border-radius: 999px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
       color: #fff;
       background: #25d366;
-      box-shadow: 0 18px 34px rgba(37, 211, 102, 0.34);
-      font-weight: 900;
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.40);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -1140,14 +1138,11 @@
       .floating-whatsapp {
         right: 14px;
         bottom: 14px;
-        min-height: 52px;
-        padding: 0 14px;
-        font-size: 0.9rem;
+        width: 52px;
+        height: 52px;
       }
 
-      .floating-whatsapp .wa-text {
-        display: none;
-      }
+      
 
       .back-to-top {
         right: 14px;
@@ -1541,6 +1536,62 @@
       .ai-skin { padding: 40px 0 36px; }
     }
 
+  
+    /* ── Gallery Page ── */
+    .gallery-page { padding-top: 20px; }
+    .gallery-hero { padding: 54px 0 36px; }
+    .gallery-hero-panel {
+      min-height: 260px; border-radius: var(--radius-xl); overflow: hidden;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: clamp(32px,5vw,64px) clamp(24px,4vw,80px);
+      background: linear-gradient(135deg, var(--lavender-700) 0%, var(--lavender-500) 100%);
+      box-shadow: var(--shadow);
+    }
+    .gallery-hero-panel .eyebrow { color: rgba(255,255,255,.78); margin-bottom: 10px; }
+    .gallery-hero-panel h1 { color: #fff; font-family: Georgia, serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 400; letter-spacing: -.04em; margin-bottom: 12px; }
+    .gallery-hero-panel p { color: rgba(255,255,255,.86); font-size: 1.05rem; font-weight: 620; max-width: 560px; }
+    .gallery-section { padding: 36px 0 20px; }
+    .gallery-section-title { font-family: Georgia, serif; font-size: clamp(1.6rem,2.5vw,2.4rem); font-weight: 400; color: var(--lavender-900); letter-spacing: -.03em; margin-bottom: 20px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px; }
+    .gallery-item { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: var(--lavender-100); box-shadow: var(--soft-shadow); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item.wide { grid-column: span 2; aspect-ratio: 16/10; }
+    .gallery-cta-band { border-radius: var(--radius-xl); padding: 40px 44px; background: rgba(255,255,255,.88); border: 1px solid rgba(155,122,200,.16); box-shadow: var(--soft-shadow); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+    .gallery-cta-band h2 { font-family: Georgia, serif; font-size: clamp(1.6rem,2.5vw,2.4rem); font-weight: 400; color: var(--lavender-900); letter-spacing: -.03em; }
+    .gallery-cta-band p { color: #4e4657; font-size: .96rem; font-weight: 620; margin-top: 6px; max-width: 520px; }
+    @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2,1fr); gap: 10px; } .gallery-cta-band { flex-direction: column; align-items: flex-start; padding: 28px 22px; } }
+
+    /* ── Contact Page ── */
+    .contact-page { padding-top: 20px; }
+    .contact-hero { padding: 54px 0 36px; }
+    .contact-hero-panel { min-height: 240px; border-radius: var(--radius-xl); overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: clamp(32px,5vw,64px) clamp(24px,4vw,80px); background: linear-gradient(135deg, var(--lavender-800) 0%, var(--lavender-600) 100%); box-shadow: var(--shadow); }
+    .contact-hero-panel .eyebrow { color: rgba(255,255,255,.76); margin-bottom: 10px; }
+    .contact-hero-panel h1 { color: #fff; font-family: Georgia, serif; font-size: clamp(2.4rem,4vw,4rem); font-weight: 400; letter-spacing: -.04em; margin-bottom: 12px; }
+    .contact-hero-panel p { color: rgba(255,255,255,.84); font-size: 1.05rem; font-weight: 620; max-width: 520px; }
+    .contact-body { padding: 36px 0 56px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    .contact-cards { display: grid; gap: 16px; }
+    .contact-card { background: rgba(255,255,255,.92); border: 1px solid rgba(155,122,200,.18); border-radius: var(--radius-lg); padding: 22px 26px; box-shadow: var(--soft-shadow); display: flex; align-items: flex-start; gap: 16px; }
+    .contact-card-icon { width: 44px; height: 44px; flex-shrink: 0; border-radius: 14px; background: var(--lavender-100); display: grid; place-items: center; color: var(--lavender-700); }
+    .contact-card-icon svg { width: 22px; height: 22px; }
+    .contact-card-body h3 { font-size: .9rem; font-weight: 900; color: var(--lavender-800); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+    .contact-card-body a, .contact-card-body p { color: #3f3949; font-size: 1rem; font-weight: 650; line-height: 1.5; }
+    .contact-card-body a:hover { color: var(--lavender-600); }
+    .contact-side { display: grid; gap: 20px; }
+    .contact-hours-card { background: linear-gradient(135deg, var(--lavender-700) 0%, var(--lavender-500) 100%); border-radius: var(--radius-xl); padding: 32px 34px; color: #fff; }
+    .contact-hours-card h2 { font-family: Georgia, serif; font-size: 1.7rem; font-weight: 400; margin-bottom: 20px; letter-spacing: -.03em; }
+    .hours-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.2); font-size: .95rem; font-weight: 650; }
+    .hours-row:last-child { border-bottom: 0; }
+    .hours-row .day { color: rgba(255,255,255,.82); }
+    .hours-row .time { color: #fff; font-weight: 850; }
+    .contact-book-card { background: rgba(255,255,255,.92); border: 1px solid rgba(155,122,200,.18); border-radius: var(--radius-xl); padding: 32px 34px; box-shadow: var(--soft-shadow); text-align: center; }
+    .contact-book-card h2 { font-family: Georgia, serif; font-size: 1.7rem; font-weight: 400; color: var(--lavender-900); letter-spacing: -.03em; margin-bottom: 10px; }
+    .contact-book-card p { color: #4e4657; font-size: .95rem; font-weight: 620; margin-bottom: 22px; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .contact-hero { padding-top: 28px; } .contact-hours-card, .contact-book-card { padding: 24px 20px; } }
+
   </style>
 </head>
 <body>
@@ -1564,7 +1615,7 @@
         <a href="#home" class="active">Home</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#bookings">Bookings</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -1714,19 +1765,7 @@
       </div>
     </section>
 
-<section class="booking" id="bookings" aria-labelledby="booking-title">
-      <div class="page-shell booking-panel">
-        <div class="booking-content">
-          <h2 id="booking-title">Book anywhere, anytime</h2>
-          <p>Choose your treatment, select your preferred time and book with ease through Patricia Beauty Clinic’s Fresha booking system.</p>
-          <div class="booking-actions">
-            <a class="btn btn-primary" id="fresha-link" href="https://www.fresha.com/book-now/havillah-beauty-px0lfiri/all-offer?share=true&pId=1447509" target="_blank" rel="noopener">Book with Patricia</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="promise" id="promise" aria-labelledby="promise-title">
+<section class="promise" id="promise" aria-labelledby="promise-title">
       <div class="page-shell promise-panel">
         <div class="promise-copy">
           <h2 id="promise-title">The <span>Patricia</span> Promise</h2>
@@ -2329,6 +2368,144 @@
   </main>
 
 
+
+
+  <main id="gallery-page" class="spa-page gallery-page" aria-label="Patricia Beauty Clinic gallery">
+    <section class="gallery-hero" aria-labelledby="gallery-title">
+      <div class="page-shell">
+        <div class="gallery-hero-panel">
+          <span class="eyebrow">Our Work</span>
+          <h1 id="gallery-title">The Patricia Gallery</h1>
+          <p>A look at the treatments, transformations and care delivered at Patricia Beauty Clinic in Kimberley.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-label="AI Skin Analysis gallery">
+      <div class="page-shell">
+        <h2 class="gallery-section-title">AI Skin Analysis</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item wide">
+            <img src="asserts/aee036e2-5dde-4ce1-8a56-9e42ceafa165.png" alt="Client at the AI skin analyser at Patricia Beauty Clinic" loading="lazy" decoding="async">
+          </div>
+          <div class="gallery-item">
+            <img src="asserts/393cf39f-db23-4952-b6e6-b782a4a4a830.png" alt="k33 AI skin analyser screen showing detailed skin scan" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <h2 class="gallery-section-title">Nails</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=75" alt="Nail treatment" loading="lazy" decoding="async"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=75&flip=h" alt="Gel nails" loading="lazy" decoding="async"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=75&sat=-20" alt="Nail overlay" loading="lazy" decoding="async"></div>
+        </div>
+
+        <h2 class="gallery-section-title">Facials &amp; Skin Care</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=75" alt="Facial treatment" loading="lazy" decoding="async"></div>
+          <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=75" alt="Skin care treatment" loading="lazy" decoding="async"></div>
+        </div>
+
+        <h2 class="gallery-section-title">Lashes &amp; Brows</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=75" alt="Lash extensions" loading="lazy" decoding="async"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=75" alt="Brow treatment" loading="lazy" decoding="async"></div>
+        </div>
+
+        <div class="gallery-cta-band">
+          <div>
+            <h2>See your transformation here</h2>
+            <p>Send us your before &amp; after photos on WhatsApp and we will feature your results in our gallery.</p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/c/27797791008" target="_blank" rel="noopener">Send on WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <main id="contact-page" class="spa-page contact-page" aria-label="Contact Patricia Beauty Clinic">
+    <section class="contact-hero" aria-labelledby="contact-title">
+      <div class="page-shell">
+        <div class="contact-hero-panel">
+          <span class="eyebrow">Patricia Beauty Clinic · Kimberley</span>
+          <h1 id="contact-title">Get in Touch</h1>
+          <p>We are here to help. Reach us by phone, WhatsApp, email, or visit us at the clinic.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-body" aria-label="Contact details">
+      <div class="page-shell">
+        <div class="contact-grid">
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 0 0 .09 2.18 2 2 0 012.09.09h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>Phone</h3>
+                <a href="tel:+27797791008">079 779 1008</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 32 32" fill="currentColor" width="22" height="22"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.826.738 5.474 2.029 7.778L.057 31.943l8.338-2.189A15.924 15.924 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm7.307 19.352c-.4-.2-2.366-1.167-2.732-1.3-.367-.133-.633-.2-.9.2-.266.4-1.033 1.3-1.266 1.566-.234.267-.467.3-.867.1-.4-.2-1.69-.623-3.22-1.987-1.19-1.061-1.994-2.373-2.228-2.772-.234-.4-.025-.617.175-.817.18-.18.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.166-1.234-2.966-.325-.78-.654-.674-.9-.687-.233-.012-.5-.015-.766-.015-.267 0-.7.1-1.067.5-.367.4-1.4 1.367-1.4 3.334 0 1.966 1.433 3.866 1.633 4.133.2.267 2.82 4.306 6.832 6.04.955.412 1.7.658 2.282.842.956.306 1.828.262 2.518.16.768-.115 2.367-.967 2.7-1.9.334-.934.334-1.734.234-1.9-.1-.167-.367-.267-.767-.467z"/></svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/c/27797791008" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>Email</h3>
+                <a href="mailto:tinyikopatriciam@gmail.com">tinyikopatriciam@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>Address</h3>
+                <p>9 Mac Dougall Street<br>Kimberley, Northern Cape</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=9%20Mac%20Dougall%20Street%20Kimberley" target="_blank" rel="noopener" style="color:var(--lavender-600);font-size:.9rem;font-weight:800;">Get Directions ↗</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>Website</h3>
+                <a href="https://www.patriciasbeautyclinic.co.za" target="_blank" rel="noopener">www.patriciasbeautyclinic.co.za</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-side">
+            <div class="contact-hours-card">
+              <h2>Opening Hours</h2>
+              <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">8:00 – 18:00</span></div>
+              <div class="hours-row"><span class="day">Saturday</span><span class="time">8:00 – 16:00</span></div>
+              <div class="hours-row"><span class="day">Sunday</span><span class="time">By appointment</span></div>
+              <div class="hours-row"><span class="day">Public Holidays</span><span class="time">By appointment</span></div>
+            </div>
+            <div class="contact-book-card">
+              <h2>Ready to book?</h2>
+              <p>Book your treatment online through our Fresha booking system — available 24/7.</p>
+              <a class="btn btn-primary" href="https://www.fresha.com/book-now/havillah-beauty-px0lfiri/all-offer?share=true&pId=1447509" target="_blank" rel="noopener">Book with Patricia ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer" id="contact">
     <div class="footer-card">
       <div class="footer-grid">
@@ -2398,7 +2575,7 @@
 
   <a class="floating-whatsapp" href="https://wa.me/c/27797791008" target="_blank" rel="noopener" aria-label="WhatsApp Patricia Beauty Clinic">
     <span class="wa-icon" aria-hidden="true"></span>
-    <span class="wa-text">WhatsApp Us</span>
+    
   </a>
 
   <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
@@ -2446,9 +2623,10 @@
 
     const internalRoutes = new Set([
       'home', 'about', 'services', 'nails', 'lashes-brows', 'advanced-aesthetics',
-      'facials-skincare', 'massage-wellness', 'makeup-glow', 'for-him-her'
+      'facials-skincare', 'massage-wellness', 'makeup-glow', 'for-him-her',
+      'gallery', 'contact'
     ]);
-    const homeAnchors = new Set(['top', 'promise', 'bookings', 'contact']);
+    const homeAnchors = new Set(['top', 'promise']);
 
     function setActivePage(route) {
       let targetRoute = route || 'home';
