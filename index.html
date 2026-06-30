@@ -2,6 +2,7 @@
 <html lang="en-ZA">
 <head>
   <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light only" />
 
   <!-- ── Primary SEO ── -->
   <title>Patricia Beauty Clinic | Luxury Beauty Salon in Kimberley, Northern Cape</title>
@@ -44,7 +45,25 @@
   
   
   <style>
+    /* ── Force light mode always — never apply system dark theme ── */
+    @media (prefers-color-scheme: dark) {
+      html, body, * { color-scheme: light only !important; }
+      body {
+        background:
+          radial-gradient(circle at 12% 8%, rgba(185,154,221,0.18), transparent 28%),
+          radial-gradient(circle at 92% 5%, rgba(222,208,242,0.45), transparent 24%),
+          linear-gradient(180deg,#fff 0%,#fffafc 42%,#fbf6ff 100%) !important;
+        color: #292735 !important;
+      }
+      .nav-card {
+        background: rgba(255,255,255,0.58) !important;
+      }
+      .top-bar {
+        background: linear-gradient(90deg,#7c5ba5,#b99add) !important;
+      }
+    }
     :root {
+      color-scheme: light only;
       --lavender-900: #4c3a62;
       --lavender-800: #62477c;
       --lavender-700: #7c5ba5;
@@ -2628,6 +2647,9 @@
         </div>
         <div class="gallery-item" data-category="makeup">
           <img src="asserts/gallery/9ef4c1a9-a07b-495c-979b-8fe0dffef5a3.webp" alt="Flawless makeup result" loading="lazy" decoding="async" width="900" height="1050">
+        </div>
+                <div class="gallery-item" data-category="treatments">
+          <img src="asserts/gallery/skin_tag_removal.webp" alt="Skin tag removal treatment at Patricia Beauty Clinic Kimberley" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item" data-category="treatments">
           <img src="asserts/gallery/e728328f-b69f-4d52-914c-5616fac879cb.webp" alt="Facial treatment in progress" loading="lazy" decoding="async" width="900" height="1040">
